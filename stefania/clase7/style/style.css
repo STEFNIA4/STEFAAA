@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ropa {
+    border: 2px solid green;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "caja2 caja3 caja1 caja1"
+        "caja2 caja3 caja4 caja5"
+        "caja6 caja6 caja4 caja5";
+}
+
+.caja {
+    border: 1px solid rgb(94, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hrmès1 {
+    grid-area: caja1;
+    background-color:aquamarine;
+}
+
+.chanel2 {
+    grid-area: caja2;
+    background-color:rgba(0, 255, 21, 0.466);
+}
+
+.luisvuittom3 {
+    grid-area: caja3;
+    background-color:blueviolet;
+}
+
+.caja4 {
+    grid-area: caja4;
+    background-color:chocolate;
+}
+
+.christiandior5 {
+    grid-area: caja5;
+    background-color:darkgreen;
+}
+
+.versace6 {
+    grid-area: caja6;
+    background-color:crimson;
+}
+
+@media screen and (max-width: 768px) {
+
+    .contenedor {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+            "caja1 caja2" 
+            "caja3 caja4" 
+            "caja5 caja6";
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    
+    .contenedor {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caja {
+        background-color: rgb(236, 0, 0);
+        color: white;
+        flex: 1;
+    }
+
+    .caja4 {
+        order: -1;
+    }
+    
+}

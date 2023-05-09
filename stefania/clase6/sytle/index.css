@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Contenedor {
+    border: 2px solid green;
+    width: 800px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "pantalon2 media3 camiseta1 camiseta1"
+        "pantalon2 media3 boxer4 zapato5"
+        "dividi6 dividi6 boxer4 zapato5";
+
+}
+.caja {
+    border: 1px solid rgba(0, 183, 255, 0.925);
+}
+
+.Camiseta1 {
+    grid-area: camiseta1;
+}
+
+.Pantalon2 {
+    grid-area: patalon2;
+}
+
+.Media3 {
+    grid-area: media3;
+}
+
+.Boxer4 {
+    grid-area: boxer4;
+}
+
+.Zapato5 {
+    grid-area: zapato5;
+}
